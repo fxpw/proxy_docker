@@ -1,0 +1,10 @@
+# curl -x http://log:pass@127.0.0.1:3128 2ip.ru
+
+services:
+  squid:
+    container_name: squid
+    build: .
+    ports:
+      - "3128:3128"
+    volumes:
+      - ./passwords.txt:/etc/squid/passwords.txt:ro
